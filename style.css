@@ -82,7 +82,7 @@ body {
 }
 
 .nebula-banner__image {
-    object-fit: scale-down;
+    object-fit: cover;
     object-position: 0 0;
     height: 100%;
     max-height: 300px;
@@ -103,7 +103,6 @@ body {
     }
 
     .nebula-banner__image {
-        object-fit: cover;
         object-position: right center;
         max-height: none;
     }
