@@ -1,0 +1,116 @@
+:root {
+    --nebula-banner-background-color: #fff;
+    --nebula-banner-border-width: 1px;
+    --nebula-banner-border-color: #E0E8EB;
+    --nebula-banner-border-radius: 24px;
+    --nebula-banner-box-shadow: none;
+}
+
+body {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+}
+
+.banner-wrapper {
+    container-type: inline-size;
+}
+
+.banner-wrapper--1400 {
+    max-width: 1400px;
+    width: 100%;
+}
+.banner-wrapper--1024 {
+    max-width: 1024px;
+    width: 100%;
+}
+.banner-wrapper--768 {
+    max-width: 768px;
+    width: 100%;
+}
+.banner-wrapper--375 {
+    max-width: 375px;
+    width: 100%;
+}
+
+.nebula-banner {
+    background: var(--nebula-banner-background-color);
+    border-color: var(--nebula-banner-border-color);
+    border-radius: var(--nebula-banner-border-radius);
+    border-style: solid;
+    border-width: var(--nebula-banner-border-width);
+    box-shadow: var(--nebula-banner-box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 1231px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}
+
+.nebula-banner__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+}
+
+.nebula-banner__headline {
+    color: #3D3D3D;
+    font-family: sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.6875rem);
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.nebula-banner__description {
+    color: #575757;
+    font-family: sans-serif;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-weight: normal;
+    line-height: 1.4;
+    margin: nebula-space-2x 0 0;
+}
+
+.nebula-banner__image {
+    object-fit: scale-down;
+    object-position: 0 0;
+    height: 100%;
+    max-height: 300px;
+    width: 100%;
+}
+
+@container (min-width: 768px) {
+    .nebula-banner {
+        display: grid;
+        gap: 16px;
+        grid-auto-flow: dense;
+        grid-template-columns: minmax(365px, 35%) 1fr;
+    }
+
+    .nebula-banner__content {
+        padding: 24px 0;
+        padding-inline-end: 24px;
+    }
+
+    .nebula-banner__image {
+        object-fit: cover;
+        object-position: right center;
+        max-height: none;
+    }
+}
+
+@container (min-width: 1024px) {
+    .nebula-banner{
+        gap: 24px;
+    }
+
+    .nebula-banner__content {
+        padding: 32px 0;
+        padding-inline-end: 32px;
+    }
+}
