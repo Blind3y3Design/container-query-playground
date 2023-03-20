@@ -18,6 +18,13 @@ body {
     container-type: inline-size;
 }
 
+.banner-wrapper--resize {
+    display: block;
+    overflow: auto;
+    resize: horizontal;
+    width: 100%;
+}
+
 .banner-wrapper--1400 {
     max-width: 1400px;
     width: 100%;
@@ -45,11 +52,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 1231px;
     overflow: hidden;
     position: relative;
     text-decoration: none;
-    width: 100%;
 }
 
 .nebula-banner__content {
